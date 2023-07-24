@@ -1,8 +1,4 @@
 n = int(input())
-arr = list(map(int, input().split()))
+arr = sorted(list(map(int, input().split())), reverse=True)
 
-arr.sort()
-arr.reverse()
-
-for i in range (n):
-    print(arr[i], end = " ")
+print(' '.join(str(arr[i]) for i in range(10)))

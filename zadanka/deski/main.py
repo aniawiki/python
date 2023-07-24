@@ -1,10 +1,1 @@
-n = int(input())
-arr = list(map(int, input().split()))
-
-arr.sort()
-arr.reverse()
-
-if (n < 4):
-    print(0)
-else: 
-    print(arr[3] * arr[3])
+print(0) if int(input()) < 4 else print(sorted(map(int, input().split()), reverse=True)[3] ** 2)
