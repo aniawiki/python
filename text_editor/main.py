@@ -35,7 +35,7 @@ class TextEditor(tk.Tk):
         if filepath:
             with open(filepath, "w") as file:
                 file.write(self.T.get(1.0, tk.END))
-
+ 
 
 if __name__ == "__main__":
     app = TextEditor()
