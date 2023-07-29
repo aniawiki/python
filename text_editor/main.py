@@ -14,7 +14,7 @@ class TextEditor(tk.Tk):
         open_button.pack(side="left", padx=1)  # Ustawiamy przycisk na lewo od ramki
         save_button = tk.Button(button_frame, text="Save", command=self.save_file)
         save_button.pack(side="left", padx=1)  # Ustawiamy przycisk na lewo od poprzedniego przycisku
-        self.T = tk.Text(self, bg = '#222222', fg='white')
+        self.T = tk.Text(self, bg = '#222222', fg='white', cursor="xterm #ffffff")
         self.T.pack(fill="both", expand=True)
         self.bind("<Configure>", self.on_resize) # zmiana rozmiaru okna
 
