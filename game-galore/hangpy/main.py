@@ -27,18 +27,18 @@ class Game:
         else:
             print("Invalid input!")
 
-        print(invalid_input)
         return invalid_input
 
     def players_turn(self):
         invalid_input = True
+        print(self.password2)
         while (invalid_input):
             guess = input("Enter a letter: ")
             invalid_input = self.check(guess)
             if self.misshits > 7:
                 print("You lost!")
+                print(f'the password was {self.password}!')
                 return not invalid_input, self.password2
-        print(not invalid_input)
         return not invalid_input, self.password2
             
     def start(self):
