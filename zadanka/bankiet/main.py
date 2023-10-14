@@ -1,23 +1,11 @@
 n = int(input())
-i = 0
-j = 1
 tables = 0
-arr = []
-arr.append(0)
+arr = [0] + [int(input()) for _ in range(n)]
+visited = [False] * (n+3)
 
-
-visited = []
-for i in range (n+3):
-    visited.append(False)
-
-for i in range(n):
-    x = int(input())
-    arr.append(x)
-
-i = 1
-while i <= n:
-    if (visited[i] == False):
-        visited[i] = True
+for i in range(1, n + 1):
+    if not visited[i]:
+        visited[i] = 1
         tables += 1
         j = arr[i]
         while j != i:
